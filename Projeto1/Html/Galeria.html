@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galeria</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    body {
+      position: relative;
+      z-index: 0;
+      background-color: black;
+      overflow-x: hidden;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-bg iframe {
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      border: none;
+      filter: blur(5px) brightness(0.4);
+    }
+
+    header, footer, section, nav, h1, p {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #111a;
+      padding: 10px 20px;
+    }
+
+    .logo-valorant {
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .interativo-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .agente-bloco {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #111;
+    }
+
+    .agente-bloco img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .agente-bloco:hover img {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    }
+
+    footer {
+      background-color: #111a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- vídeo de fundo -->
+  <div class="video-bg">
+    <iframe 
+      src="https://www.youtube.com/embed/IhhjcB2ZjIM?autoplay=1&mute=1&loop=1&controls=0&playlist=IhhjcB2ZjIM&modestbranding=1&showinfo=0&rel=0"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="https://img.icons8.com/?size=512&id=aUZxT3Erwill&format=png" alt="Logo Valorant" class="logo-valorant" />
+      <h1>Valorant</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../Index.html">Início</a></li>
+        <li><a href="../Html/Sobre.html">Sobre</a></li>
+        <li><a href="../Html/Galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="interativo-container">
+    <a href="https://valorant.fandom.com/wiki/Brimstone" class="agente-bloco">
+      <img src="https://gamingbolt.com/wp-content/uploads/2020/07/Valorant_Brimstone.jpg" alt="Brimstone">
+    </a>
+    <a href="https://valorant.fandom.com/wiki/Viper" class="agente-bloco">
+      <img src="https://th.bing.com/th/id/OIP.az-3fVl8bjhuEfUscPtmWgHaEK?cb=iwc2&rs=1&pid=ImgDetMain" alt="Viper">
+    </a>
+    <a href="https://valorant.fandom.com/wiki/Omen" class="agente-bloco">
+      <img src="https://th.bing.com/th/id/OIP.6XY_8iqEaJlylYwx8J5kIAHaEK?cb=iwc2&rs=1&pid=ImgDetMain" alt="Omen">
+    </a>
+    <a href="https://valorant.fandom.com/wiki/Astra" class="agente-bloco">
+      <img src="https://picfiles.alphacoders.com/423/thumb-1920-423775.png" alt="Astra">
+    </a>
+    <a href="https://valorant.fandom.com/wiki/Harbor" class="agente-bloco">
+      <img src="https://th.bing.com/th/id/OIP.ZfxwgnQY-IUb0i_PX4GRJQHaEK?cb=iwc2&rs=1&pid=ImgDetMain" alt="Harbor">
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lester. Todos os direitos reservados.</p>
+    <p>Este site é um projeto de fã e não é afiliado à Riot Games. Valorant e todos os elementos relacionados são marcas registradas da Riot Games, Inc.</p>
+    <p>Endereço: InYoAss,8==D - Piltover, RJ</p>
+    <p>Telefone: (40)028922</p>
+    <p id="2025"></p>
+  </footer>
+
+</body>
+</html>
